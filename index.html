@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>老大课评工具</title>
+</head>
+<style>
+    #tool {
+        display: flex;
+        flex-direction: column;
+    }
+    .course{
+        width: 22rem;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        border: 1px solid #ddd;
+        font-size: 14px;
+        border-radius: 5px;
+    }
+    .course_title{
+        padding: 5px 0;
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+    }
+    .course_form{
+        margin: 15px 0;
+    }
+    .course_module{
+        padding: 5px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+        .course_module input{
+            padding: 5px;
+            width: 15rem;
+            border: 1px solid #ddd;
+        }
+        .course_module textarea{
+            width: 15.4rem;
+            border: 1px solid #ddd;
+            min-height: 4.5rem;
+        }
+    .course_add_btn{
+        width: 100%;
+        padding: 2px 0;
+        background-color: #ddd;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .btns{
+        display: flex;
+        justify-content: center;
+    }
+    .btns .btn_submit{
+        border: none;
+        background-color: #7bdd37;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-right: 80px;
+    }
+    .btns .btn_reset{
+        border: none;
+        background-color: #ee2f12;
+        color: #fff;
+        padding: 6px 22px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <form id="tool">
+        <div class="course">
+            <div class="course_title">乐高</div>
+            <div class="course_form">
+                <div class="course_module">
+                    <label>课程名称：</label>
+                    <input type="text" placeholder="请输入课程名称"/>
+                </div>
+                <div class="course_module">
+                    <label>课程目标：</label>
+                    <textarea></textarea>
+                </div>
+                <div class="course_module">
+                    <label>学生姓名：</label>
+                    <input type="text" placeholder="请输入学生姓名"/>
+                </div>
+            </div>
+            <div class="course_add_btn" onclick="addStuModule()">+</div>        
+        </div>
+        <div class="course">
+            <div class="course_title">kitten</div>
+            <div class="course_form">
+                <div class="course_module">
+                    <label>课程名称：</label>
+                    <input type="text" placeholder="请输入课程名称"/>
+                </div>
+                <div class="course_module">
+                    <label>课程目标：</label>
+                    <textarea></textarea>
+                </div>
+                <div class="course_module">
+                    <label>学生姓名：</label>
+                    <input type="text" placeholder="请输入学生姓名"/>
+                </div>
+            </div>
+            <div class="course_add_btn" onclick="addStuModule()">+</div>        
+        </div>
+        <div class="course">
+            <div class="course_title">python</div>
+            <div class="course_form">
+                <div class="course_module">
+                    <label>课程名称：</label>
+                    <input type="text" placeholder="请输入课程名称"/>
+                </div>
+                <div class="course_module">
+                    <label>课程目标：</label>
+                    <textarea></textarea>
+                </div>
+                <div class="course_module">
+                    <label>学生姓名：</label>
+                    <input type="text" placeholder="请输入学生姓名"/>
+                </div>
+            </div>
+            <div class="course_add_btn" onclick="addStuModule()">+</div>        
+        </div>
+        <div class="btns">
+            <button class="btn_submit">生成课评</button>
+            <button type="reset" class="btn_reset">重置</button>
+        </div>
+    </form>
+</body>
+<script src="./index.js"></script>
+</html>
