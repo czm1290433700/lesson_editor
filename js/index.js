@@ -22,7 +22,7 @@ const kitten = {
         `宝贝很棒，很乖巧，能够积极回答老师的问题，在拼搭积木的过程中，也能够自己动手一步步做好，非常棒，后面增加旋转的时候，能够自己修改不同的速度和时间，学得很好，棒棒哒，要继续加油，喜欢的话来编程猫，创作更多有意思的作品哦。`
     ],
     head1 : `同学今天顺利地完成了本节课`,
-    head2 : `的作品，这节课的主要知识点包括`
+    head2 : `的作品，这节课的主要知识点包括：`
 }
 // python课评库常量
 const python = { 
@@ -34,8 +34,8 @@ const python = {
         `同学在课堂上表现得很不错，他是一个很听话的学生，也比较善于思考，在接触新的概念的时候，他都能听得很认真，积极地去思考以及回答问题，很快就学会了一些新方法的基本使用，并且在创作作品的时候，还能够做出难度更高的挑战任务，很不错，希望持续保持对学习的热情哦`,
         `同学的编程思想还是很不错的，在讲授新知识的时候，他还是能够比较轻松地理解，并且根据老师的示范，他也会自己做一遍代码实践，再加上自己的一些思考，这样学习会比较容易获得知识，加油，希望继续保持学习的积极态度哦。`
     ],
-    head1 : `宝贝今天完成了`,
-    head2 : `的作品，课程的目标主要有以下几点：`
+    head1 : `同学今天顺利完成了`,
+    head2 : `中课堂的学习，这节课的主要知识点包括，`
 }
 
 const courses = ['乐高', 'kitten', 'python']
@@ -119,6 +119,7 @@ const addStuModule = (ev) => {
  */
 const getCourseDiscuss = () => {
     const formDatas = document.getElementsByClassName('course_form');
+    const content = document.getElementById('content');
     for(let i = 0; i < formDatas.length; i++) {
         const formData = formDatas[i],
             courseName = formData.querySelector('input[name="course_name"]').value, // 课程名称
@@ -136,8 +137,14 @@ const getCourseDiscuss = () => {
                 return;
             }
         }
+        const title = document.createElement('h1');
+        title.innerHTML = courses[i];
+        content.appendChild(title);
         for(let stu of stus) {
-            console.log(get_discuss(stu, courseName, courseGoal, i));
+            const discuss = document.createElement('p');
+            discuss.innerHTML = get_discuss(stu, courseName, courseGoal, i);
+            content.appendChild(discuss);
         }
     }
+    $("#content").wordExport("课评");
 }

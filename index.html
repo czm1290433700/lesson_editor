@@ -74,6 +74,10 @@
         border-radius: 3px;
         cursor: pointer;
     }
+
+    #content{
+        display: none;
+    }
 </style>
 <body>
     <form id="tool">
@@ -141,7 +145,11 @@
             <button type="button" class="btn_submit" onclick="getCourseDiscuss()">生成课评</button>
             <button type="reset" class="btn_reset">重置</button>
         </div>
+        <div id="content"></div>
     </form>
 </body>
-<script src="./index.js"></script>
+<script src="js/index.js"></script>
+<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/FileSaver.js"></script>
+<script src="js/jquery.wordexport.js"></script>
 </html>
