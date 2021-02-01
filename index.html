@@ -82,15 +82,17 @@
             <div class="course_form">
                 <div class="course_module">
                     <label>课程名称：</label>
-                    <input type="text" placeholder="请输入课程名称"/>
+                    <input type="text" name="course_name" placeholder="请输入课程名称"/>
                 </div>
                 <div class="course_module">
                     <label>课程目标：</label>
-                    <textarea></textarea>
+                    <textarea name="course_goal"></textarea>
                 </div>
-                <div class="course_module">
-                    <label>学生姓名：</label>
-                    <input type="text" placeholder="请输入学生姓名"/>
+                <div class="course_stus">
+                    <div class="course_module">
+                        <label>学生姓名1：</label>
+                        <input type="text" name="course_stuName" placeholder="请输入学生姓名"/>
+                    </div>
                 </div>
             </div>
             <div class="course_add_btn" onclick="addStuModule()">+</div>        
@@ -100,15 +102,17 @@
             <div class="course_form">
                 <div class="course_module">
                     <label>课程名称：</label>
-                    <input type="text" placeholder="请输入课程名称"/>
+                    <input type="text" name="course_name" placeholder="请输入课程名称"/>
                 </div>
                 <div class="course_module">
                     <label>课程目标：</label>
-                    <textarea></textarea>
+                    <textarea name="course_goal"></textarea>
                 </div>
-                <div class="course_module">
-                    <label>学生姓名：</label>
-                    <input type="text" placeholder="请输入学生姓名"/>
+                <div class="course_stus">
+                    <div class="course_module">
+                        <label>学生姓名1：</label>
+                        <input type="text" name="course_stuName" placeholder="请输入学生姓名"/>
+                    </div>
                 </div>
             </div>
             <div class="course_add_btn" onclick="addStuModule()">+</div>        
@@ -118,21 +122,23 @@
             <div class="course_form">
                 <div class="course_module">
                     <label>课程名称：</label>
-                    <input type="text" placeholder="请输入课程名称"/>
+                    <input type="text" name="course_name" placeholder="请输入课程名称"/>
                 </div>
                 <div class="course_module">
                     <label>课程目标：</label>
-                    <textarea></textarea>
+                    <textarea name="course_goal"></textarea>
                 </div>
-                <div class="course_module">
-                    <label>学生姓名：</label>
-                    <input type="text" placeholder="请输入学生姓名"/>
+                <div class="course_stus">
+                    <div class="course_module">
+                        <label>学生姓名1：</label>
+                        <input type="text" name="course_stuName" placeholder="请输入学生姓名"/>
+                    </div>
                 </div>
             </div>
             <div class="course_add_btn" onclick="addStuModule()">+</div>        
         </div>
         <div class="btns">
-            <button class="btn_submit">生成课评</button>
+            <button type="button" class="btn_submit" onclick="getCourseDiscuss()">生成课评</button>
             <button type="reset" class="btn_reset">重置</button>
         </div>
     </form>
