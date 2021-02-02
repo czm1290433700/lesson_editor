@@ -82,7 +82,7 @@ const get_content = (name, mode, isOld) => {
         default:
             break;
     }
-    return name + content[Math.floor(Math.random() * content.length)] + isOld ? ending.oldStu : ending.newStu;
+    return name + content[Math.floor(Math.random() * content.length)] + (isOld ? ending.oldStu : ending.newStu);
 }
 
 /**
@@ -94,7 +94,7 @@ const get_content = (name, mode, isOld) => {
  * @param {*} isOld
  */
 const get_discuss = (stuName, courseName, courseGoal, mode, isOld) => {
-    return get_head(stuName, courseName, mode) + courseGoal + get_content(stuName, mode);
+    return get_head(stuName, courseName, mode) + courseGoal + get_content(stuName, mode, isOld);
 }
 
 /**
